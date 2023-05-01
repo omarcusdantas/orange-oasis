@@ -1,0 +1,184 @@
+.menu li:first-child {
+    border-bottom: 3px solid #ff523b;   
+    transform: translateY(-5px);
+}
+
+.hero {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content, .hero img {
+    flex-basis: 50%;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.hero img {
+    max-width: 610px;
+
+}
+
+.hero:after {
+    content: url(../img/home/arrow.png);
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes downarrow {
+    0% {transform: translate(-50%, 0); opacity: 0.4;}
+    100% {transform: translate(-50%, 0.4em); opacity: 0.9;}
+}
+
+.hero-content button {
+    background-color: #ff523b;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background-color: #563434;
+}
+
+.benefits {
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.benefit {
+    background-color: #fffafa;
+    padding: 20px 20px 10px 20px;
+    border: 2px solid #FF8833;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit:hover {
+    box-shadow: 0px 0px 32px 0px rgba(255,136,51,0.3);
+}
+
+.benefit img {
+    margin-bottom: 20px;
+}
+
+.benefit p {
+    background-color: #FF8833;
+    width: 90%;
+    color: white;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    margin: 50px 0 50px 0;
+    line-height: 50px;
+    color: #555;
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.title::after {
+    content: "";
+    background-color: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.discount {
+    margin-top: 60px;
+    background: #060F1E url("../img/home/discount.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.discount h2, .banner h2 {
+    color: white;
+}
+
+.discount h3 {
+    color: #ff523b;
+}
+
+.discount button {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 30px;
+    background-color: #ff523b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.discount button:hover {
+    background-color: white;
+    color: #ff523b;
+}
+
+.banners {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 60px 40px 60px 40px;
+}
+
+.banner {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.banner:first-child {
+    background: url(../img/home/banner1.jpg);
+}
+
+.banner:nth-child(2) {
+    background: url(../img/home/banner2.jpg);
+}
+
+.banner:nth-child(3) {
+    background: url(../img/home/banner3.jpg);
+}
+
+.banner h3 {
+    font-weight: 600;
+}
+
+.banner h4 {
+    color: #ff523b;
+}

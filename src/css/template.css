@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFECE9;
+}
+
+h1 {
+    font-size: 0;
+}
+
+h2 {
+    font-size: 5rem;
+    line-height: 60px;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+h3 {
+    color: white;
+    font-size: 2rem;
+}
+
+h4 {
+    color: #555;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+p {
+    line-height: 25px;
+    color: #555;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.6rem;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+header {
+    background-color: radial-gradient(#fff,#ffd6d6);
+}
+
+header ion-icon {
+    font-size: 25px;
+    transition: transform 0.3s;
+}
+
+header ion-icon:last-child:hover {
+    transform: translateY(-5px);
+}
+
+.header-container {
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    padding: 5px 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.menu li:hover {
+    transform: translateY(-5px);
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    padding-top: 5px;
+    margin-right: 20px;
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+}
+
+footer {
+    padding-top: 5px;
+    background-color: #FFC26B;
+    box-shadow: 0px -12px 18px 4px rgba(231,166,26,0.32);
+}
+
+footer>p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer-container {
+    margin: 10px auto;
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #ff523b;
+    gap: 30px;
+}
+
+.app p {
+    margin: 10px 0;
+}
+
+.app-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-images img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.purpose {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.purpose p {
+    font-size: 1.4rem;
+}
+
+.purpose img {
+    width: 150px;
+}
+
+.about, .follow {
+    flex-basis: 50%;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.links ul li {
+    margin-top: 10px;
+}
+
+.links h4 {
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.show {
+    display: block;
+}

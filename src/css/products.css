@@ -1,0 +1,57 @@
+header {
+    background-color: #FFECE9;
+}
+
+main {
+    padding-bottom: 30px;
+}
+
+.menu li:nth-child(2) {
+    border-bottom: 3px solid #ff523b;   
+    transform: translateY(-5px);
+}
+
+.products-title {
+    color: black;
+    font-weight: 700;
+    padding: 80px 0px 40px 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.toggle-page {
+    margin-bottom: 40px;
+    padding-left: 120px;
+}
+
+.page-button {
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff523b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.page-button p {
+    font-size: 2rem;
+    color: inherit;
+}
+
+.page-button:hover {
+    background-color: white;
+    color: #555555;
+}
+
+.current-button {
+    background-color: white;
+    color: #555555;
+}
+
+.hidden {
+    display: none;
+}
