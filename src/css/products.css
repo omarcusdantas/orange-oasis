@@ -16,8 +16,9 @@ main {
 }
 
 .toggle-page {
+    display: flex;
+    justify-content: center;
     margin-bottom: 40px;
-    padding-left: 120px;
 }
 
 .page-button {
