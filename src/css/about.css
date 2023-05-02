@@ -53,3 +53,20 @@
 .who p {
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {    
+    .about-banner {
+        height: 150px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .about img, .who {
+        width: 300px;
+    }
+}

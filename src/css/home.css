@@ -186,3 +186,66 @@ header {
 .banner h4 {
     color: #ff523b;
 }
+
+@media (max-width: 910px) {
+    .hero {
+        margin-top: 0;
+    }
+
+    .banner {
+        width: 300px;
+        height: 150px;
+    }
+
+    .hero-content, .hero img {
+        flex-basis: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero img {
+        height: 365px;
+        width: 300px;
+    }
+
+    .hero:after {
+        display: none;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .benefit {
+        width: 165px;
+    }
+
+    .benefit p {
+        width: 95%;
+    }
+
+    .benefit img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.6rem;
+        margin: 30px 0;
+    }
+
+    .benefits {
+        gap: 20px;
+    }
+
+    .benefit {
+        width: 150px;
+    }
+    
+    .hero-content {
+        padding: 10px;
+    }
+}
