@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/template.css">
-    <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="stylesheet" href="./src/css/products.css">
     <link rel="stylesheet" href="./src/css/product-style.css">
     <link rel="stylesheet" href="./src/css/responsive.css">
     <title>OrangeOasis</title>
@@ -29,39 +29,16 @@
                 <ion-icon name="bag-outline"></ion-icon>
             </div>
         </div>
-        <div class="container hero">
-            <div class="hero-content">
-                <h2>Elevate Your<br>Casual Style<br></h2>
-                <p>
-                    A wide range of high-quality clothing perfect for any casual occasion.
-                    Feel confident and express your individuality no matter where you go.
-                </p>
-                <button>Explore Now</button>
-            </div>
-            <img src="./src/img/home/hero.png" alt="Photo of model in sweatshirt">
-        </div>
     </header>
     <main>
-        <div class="container benefits">
-            <div class="benefit">
-                <img src="./src/img/home/b1.png" alt="Free shipping">
-                <p>Free Shipping</p>
-            </div>
-            <div class="benefit">
-                <img src="./src/img/home/b2.png" alt="Fast delivery">
-                <p>Fast Delivery</p>
-            </div>
-            <div class="benefit">
-                <img src="./src/img/home/b3.png" alt="Cashback">
-                <p>Cashback</p>
-            </div>
-            <div class="benefit">
-                <img src="./src/img/home/b4.png" alt="F24/7 support">
-                <p>F24/7 Support</p>
-            </div>
+        <h2 class="products-title">All products</h2>
+        <div class="container toggle-page">
+            <div class="page-button" id="back-button"><p><</p></div>
+            <div class="page-button current-button" id="1-button"><p>1</p></div>
+            <div class="page-button" id="2-button"><p>2</p></div>
+            <div class="page-button" id="foward-button"><p>></p></div>
         </div>
-        <h3 class="title">Featured Products</h3>
-        <div class="container featured">
+        <div class="container allproducts current" id="1-page">
             <div class="product">
                 <img src="./src/img/home/f1.jpg" alt="White purple shirt">
                 <h4>White Purple Shirt</h4>
@@ -110,14 +87,6 @@
                 </div>
                 <p>$50.00</p>
             </div>
-        </div>
-        <div class="discount">
-            <h2>Check Out Our Discounts</h2>
-            <h3>We always find a way for you to save money</h3>
-            <button>See more</button>
-        </div>
-        <h3 class="title">Latest Products</h3>
-        <div class="container latest">
             <div class="product">
                 <img src="./src/img/home/f1.jpg" alt="White purple shirt">
                 <h4>White Purple Shirt</h4>
@@ -215,18 +184,150 @@
                 <p>$50.00</p>
             </div>
         </div>
-        <div class="banners">
-            <div class="banner">
-                <h3>UPCOMING SEASON</h3>
-                <h4>Winter collection</h4>
+        <div class="container allproducts hidden" id="2-page">
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
             </div>
-            <div class="banner">
-                <h3>T-SHIRTS</h3>
-                <h4>New trendy</h4>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
             </div>
-            <div class="banner">
-                <h3>UP TO 40% DISCOUNT</h3>
-                <h4>Your wallet<br>says thanks</h4>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
+                <h4>White Purple Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
             </div>
         </div>
     </main>
@@ -272,5 +373,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="./src/js/jquery-3.6.4.min.js"></script>
     <script src="./src/js/menu.js"></script>
+    <script src="./src/js/products.js"></script>
 </body>
 </html>
