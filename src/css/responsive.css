@@ -117,6 +117,15 @@
     .hamburger-menu {
         display: block;
     }
+
+    .about-banner {
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
 }
 
 
@@ -156,5 +165,9 @@
 
     .product img {
         width: 130px;
+    }
+
+    .about img, .who {
+        width: 300px;
     }
 }

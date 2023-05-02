@@ -52,7 +52,7 @@ ion-icon {
 }
 
 header {
-    background-color: radial-gradient(#fff,#ffd6d6);
+    background: #FFECE9;
 }
 
 header ion-icon {
@@ -162,7 +162,7 @@ footer>p {
     width: 150px;
 }
 
-.about, .follow {
+.about-links, .follow-links {
     flex-basis: 50%;
 }
 

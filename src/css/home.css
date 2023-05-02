@@ -1,3 +1,7 @@
+header {
+    background: radial-gradient(#fff,#ffd6d6);
+}
+
 .menu li:first-child {
     border-bottom: 3px solid #ff523b;   
     transform: translateY(-5px);
