@@ -39,16 +39,7 @@ main {
     color: inherit;
 }
 
-.page-button:hover {
-    background-color: white;
-    color: #555555;
-}
-
 .current-button {
     background-color: white;
     color: #555555;
-}
-
-.hidden {
-    display: none;
 }
