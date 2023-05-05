@@ -19,11 +19,11 @@ function changeQuantity(index, quantity) {
 function renderCart() {
     const cartItems = $('.cart-items');
 
-    if (products === null) {
+    if (products.length === 0) {
         cartItems.empty();
         const productHtml = `
             <div class="cart-item">
-                <h3 class="empty">Your cart is empty. Come back when finished shopping.</h3>
+                <h3 class="empty">Your cart is empty. Come back after you finish shopping.</h3>
             </div>
         `;
         cartItems.append(productHtml);

@@ -1,5 +1,5 @@
 function addToCart() {
-    let cart = JSON.parse(sessionStorage.getItem("cart"));
+    const cart = JSON.parse(sessionStorage.getItem("cart"));
 
     const productInfo = $(".product-table");
     const productImg = productInfo.find("img").attr("src");
@@ -16,12 +16,7 @@ function addToCart() {
         quantity: productQuantity
     };
 
-    if (cart === null) {
-        cart = [product];
-    }
-    else {
-        cart.push(product);
-    }
+    cart.push(product);
 
     const data = JSON.stringify(cart);
     sessionStorage.setItem("cart", data);

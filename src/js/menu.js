@@ -33,10 +33,16 @@ menuButton.click(() => {
 
 function checkCart() {
     const cart = JSON.parse(sessionStorage.getItem("cart"));
+    cartInfo = $(".cart-info");
+
     if (cart.length != 0) {
-        console.log(cart);
-        $(".cart-info").removeClass("cart-empty");
-        $(".cart-info p").text(`${cart.length}`);
+        cartInfo.removeClass("cart-empty");
+        cartInfo.find("p").text(`${cart.length}`);
+        return;
+    }
+
+    if (!cartInfo.hasClass("cart-empty")) {
+        cartInfo.addClass("cart-empty");
     }
 }
 
