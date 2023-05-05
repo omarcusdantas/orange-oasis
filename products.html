@@ -24,7 +24,12 @@
                     </ul>
                 </nav>
                 <ion-icon name="menu-outline" class="hamburger-menu"></ion-icon>
-                <ion-icon name="bag-outline"></ion-icon>
+                <a href="cart.html" class="cart-icon">
+                    <ion-icon name="bag-outline"></ion-icon>
+                    <div class="cart-info cart-empty">
+                        <p></p>
+                    </div>
+                </a>
             </div>
         </div>
     </header>
@@ -333,11 +338,18 @@
                 <img src="./src/img/home/f1.jpg" alt="White purple shirt">
                 <div class="product-info">
                     <h4>Home/Shirt</h4>
-                    <h2>White purple shirt</h2>
-                    <h3>$50.00</h3>
-                    <select name="" id=""></select>
-                    <input type="number" name="" id="">
-                    <button>Comprar</button>
+                    <h2 id="product-name">White purple shirt</h2>
+                    <h3 id="product-price">$50.00</h3>
+                    <select id="product-size">
+                        <option value="">Select size</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <input type="number" value="1" id="product-quantity">
+                    <button id="add">Add To Cart</button>
                     <h3>Product Details</h3>
                     <p>
                         A high-quality cloth perfect for any casual occasion.
@@ -392,5 +404,6 @@
     <script src="./src/js/menu.js"></script>
     <script src="./src/js/products.js"></script>
     <script src="./src/js/render-products.js"></script>
+    <script src="./src/js/add-to-cart.js"></script>
 </body>
 </html>

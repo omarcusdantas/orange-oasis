@@ -30,3 +30,14 @@ menuButton.click(() => {
     setTimeout(toggleMenuHeight, 1);
     setTimeout(placeMenuUnselected, 250);
 });
+
+function checkCart() {
+    const cart = JSON.parse(sessionStorage.getItem("cart"));
+    if (cart.length != 0) {
+        console.log(cart);
+        $(".cart-info").removeClass("cart-empty");
+        $(".cart-info p").text(`${cart.length}`);
+    }
+}
+
+$(document).ready(checkCart);

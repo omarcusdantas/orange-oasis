@@ -185,6 +185,36 @@ footer>p {
     display: block;
 }
 
+.cart-icon {
+    position: relative;
+    margin-top: 5px;
+}
+
+.cart-info {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    border-radius: 50%;
+    bottom: -4px;
+    left: -5px;
+}
+
+.cart-info p {
+    position: absolute;
+    top: -3.5px;
+    left: 1.5px;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+}
+
+.cart-empty {
+    visibility: hidden;
+}
+
 @media (max-width: 910px) {
     h2 {
         font-size: 4rem;

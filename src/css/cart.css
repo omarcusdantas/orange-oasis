@@ -1,0 +1,215 @@
+.cart {
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.quantity, .sub-total {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.sub-total h4:last-child {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-item {
+    padding: 0 30px 0 10px;
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    gap: 50px;
+    width: fit-content;
+}
+
+.cart-item ion-icon {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cart-item input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.cart-item>h4 {
+    width: 100px;
+}
+
+.cart-product {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-product h4:nth-child(2) {
+    width: 220px;
+}
+
+.cart-product h4 {
+    line-height: 30px;
+}
+
+.cart-product img {
+    width: 100px;
+    height: 100px;
+}
+
+.item-total {
+    display: flex;
+    gap: 50px
+}
+
+.cart-bottom {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.enter-coupom {
+    background-color: #ff523b;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.enter-coupom input {
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+
+.cart-bottom h3 {
+    color: white;
+    font-weight: 600;
+}
+
+.enter-coupom button {
+    height: 40px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    color: #ff523b;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.enter-coupom button:hover {
+    background-color: #ff523b;
+    color: white;
+}
+
+.total-details {
+    background-color: #cacaca;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.total-details button {
+    height: 40px;
+    margin-top: 25px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff523b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 25px auto 0;
+}
+
+.total-details button:hover {
+    background-color: white;
+    color: #ff523b;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.empty {
+    color: black;
+    padding: 30px;
+    text-align: center;
+}
+
+@media (max-width: 910px) {
+    .cart-product h4:nth-child(2) {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        align-items: end;
+    }
+
+    .cart-item ion-icon {
+        margin-right: -5px;
+    }
+
+    .item-total {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cart-bottom {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart {
+        margin-top: 20px;
+    }
+
+    .cart-bottom {
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enter-coupom, .total-details {
+        width: 300px;
+    }
+}
