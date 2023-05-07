@@ -19,7 +19,7 @@ function changeQuantity(index, quantity) {
 function renderCart() {
     const cartItems = $('.cart-items');
 
-    if (products.length === 0) {
+    if (!Array.isArray(products) || products.length === 0) {
         cartItems.empty();
         const productHtml = `
             <div class="cart-item">

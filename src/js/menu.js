@@ -35,7 +35,7 @@ function checkCart() {
     const cart = JSON.parse(sessionStorage.getItem("cart"));
     cartInfo = $(".cart-info");
 
-    if (cart.length != 0) {
+    if (Array.isArray(cart) && cart.length != 0) {
         cartInfo.removeClass("cart-empty");
         cartInfo.find("p").text(`${cart.length}`);
         return;

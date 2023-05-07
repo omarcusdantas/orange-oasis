@@ -1,12 +1,20 @@
 function addToCart() {
-    const cart = JSON.parse(sessionStorage.getItem("cart"));
+    
+    let cart = JSON.parse(sessionStorage.getItem("cart"));
 
     const productInfo = $(".product-table");
     const productImg = productInfo.find("img").attr("src");
     const productName = productInfo.find("#product-name").text();
     const productPrice = productInfo.find("#product-price").text();
-    const productSize = productInfo.find("#product-size").val();
+    const productSizeSelect = productInfo.find("#product-size");
+    const productSize = productSizeSelect.val();
     const productQuantity = productInfo.find("#product-quantity").val();
+
+    if (productSize === "") {
+        productSizeSelect.addClass("choose-size");
+        return;
+    }
+    productSizeSelect.removeClass("choose-size");
 
     const product = {
         img: productImg,
@@ -16,7 +24,12 @@ function addToCart() {
         quantity: productQuantity
     };
 
-    cart.push(product);
+    if (Array.isArray(cart)) {
+        cart.push(product);
+    }
+    else {
+        cart = [product];
+    }
 
     const data = JSON.stringify(cart);
     sessionStorage.setItem("cart", data);

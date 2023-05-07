@@ -93,6 +93,10 @@
     font-size: 1.6rem;
 }
 
+.choose-size {
+    outline: 2px solid red !important;
+}
+
 .product-info input {
     width: 40px;
     height: 30px;
