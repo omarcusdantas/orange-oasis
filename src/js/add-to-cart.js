@@ -1,7 +1,7 @@
 function addToCart() {
     
     let cart = JSON.parse(sessionStorage.getItem("cart"));
-
+    const productScreen = $(".product-screen");
     const productInfo = $(".product-table");
     const productImg = productInfo.find("img").attr("src");
     const productName = productInfo.find("#product-name").text();
@@ -37,5 +37,3 @@ function addToCart() {
 
     checkCart();
 }
-
-$("#add").click(addToCart);

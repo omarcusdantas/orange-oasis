@@ -27,6 +27,8 @@ function renderCart() {
             </div>
         `;
         cartItems.append(productHtml);
+        $("#total").text(`$0.00`);
+        $("#subtotal").text(`$0.00`);
         return;
     }
 
@@ -76,3 +78,7 @@ function renderCart() {
 }
 
 $(document).ready(renderCart);
+
+$("#coupom-button").click(() => {
+    $("#coupom-input").addClass("wrong-coupom")
+})

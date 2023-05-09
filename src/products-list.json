@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "name": "White Floral Shirt",
+        "image": "./src/img/products/p1.jpg",
+        "price": "$40.90",
+        "rating": 5,
+        "description": "Perfect for sunny days and warm evenings, this white floral shirt is light and airy, and will keep you looking and feeling cool."
+    },
+    {
+        "id": 2,
+        "name": "Bicolor Shirt",
+        "image": "./src/img/products/p2.jpg",
+        "price": "$36.90",
+        "rating": 5,
+        "description": "Get two looks in one with this versatile shirt! Featuring a bright orange side and a cool blue side with an orange pocket, it's perfect for switching up your style whenever you want."
+    },
+    {
+        "id": 3,
+        "name": "Purple Feline Shirt",
+        "image": "./src/img/products/p3.jpg",
+        "price": "$39.90",
+        "rating": 5,
+        "description": "Get ready to show off your love for felines with this adorable purple shirt featuring a multitude of playful cat illustrations. It's the perfect choice for cat lovers everywhere!"
+    },
+    {
+        "id": 4,
+        "name": "Black Sneakers",
+        "image": "./src/img/products/p4.jpg",
+        "price": "$49.90",
+        "rating": 5,
+        "description": "Take on any adventure in style with these sleek and versatile black sport casual sneakers. Perfect for the on-the-go individual who wants both comfort and style."
+    },
+    {
+        "id": 5,
+        "name": "Green Floral Shirt",
+        "image": "./src/img/products/p5.jpg",
+        "price": "$38.90",
+        "rating": 4.5,
+        "description": "Embrace the beauty of nature with this vibrant green floral shirt. The intricate flower pattern adds a touch of elegance to any outfit."
+    },
+    {
+        "id": 6,
+        "name": "Grey Sneakers",
+        "image": "./src/img/products/p6.jpg",
+        "price": "$49.90",
+        "rating": 4.5,
+        "description": "Stay on-trend with these fashionable grey sport casual sneakers. Perfect for the gym, running errands, or a night out with friends."
+    },
+    {
+        "id": 7,
+        "name": "Grey Casual Shorts",
+        "image": "./src/img/products/p7.jpg",
+        "price": "$31.90",
+        "rating": 4.5,
+        "description": "Stay cool and comfortable in these versatile grey casual shorts. Perfect for a day out in the sun or a casual evening with friends."
+    },
+    {
+        "id": 8,
+        "name": "Black Shirt",
+        "image": "./src/img/products/p8.jpg",
+        "price": "$38.90",
+        "rating": 4,
+        "description": "Get ready to impress with this sleek black shirt. The classic design is perfect for those who want to look sharp and put-together."
+    },
+    {
+        "id": 9,
+        "name": "Orange Shirt",
+        "image": "./src/img/products/p9.jpg",
+        "price": "$33.90",
+        "rating": 3.5,
+        "description": "Add a pop of color to your wardrobe with this stunning orange Shirt. The vibrant hue is sure to turn heads."
+    },
+    {
+        "id": 10,
+        "name": "Grey Shirt",
+        "image": "./src/img/products/p10.jpg",
+        "price": "$35.90",
+        "rating": 4,
+        "description": "Add a touch of elegance to your wardrobe with this beautiful grey shirt. The versatile color and comfortable fit make it a wardrobe staple."
+    },
+    {
+        "id": 11,
+        "name": "Light-grey Sneakers",
+        "image": "./src/img/products/p11.jpg",
+        "price": "$47.90",
+        "rating": 4,
+        "description": "Stay comfortable and stylish with these versatile grey sport casual sneakers. The sleek design is perfect for any casual occasion."
+    },
+    {
+        "id": 12,
+        "name": "Jeans Shirt",
+        "image": "./src/img/products/p12.jpg",
+        "price": "$39.90",
+        "rating": 4.5,
+        "description": "Get ready to turn heads with this fashionable jeans shirt. The unique and stylish design is perfect for those who want to stand out."
+    },
+    {
+        "id": 13,
+        "name": "Green Floral Shirt",
+        "image": "./src/img/products/p5.jpg",
+        "price": "$38.90",
+        "rating": 4.5,
+        "description": "Embrace the beauty of nature with this vibrant green floral shirt. The intricate flower pattern adds a touch of elegance to any outfit."
+    },
+    {
+        "id": 14,
+        "name": "Grey Casual Shorts",
+        "image": "./src/img/products/p7.jpg",
+        "price": "$31.90",
+        "rating": 4.5,
+        "description": "Stay cool and comfortable in these versatile grey casual shorts. Perfect for a day out in the sun or a casual evening with friends."
+    },
+    {
+        "id": 15,
+        "name": "Grey Sneakers",
+        "image": "./src/img/products/p6.jpg",
+        "price": "$49.90",
+        "rating": 4.5,
+        "description": "Stay on-trend with these fashionable grey sport casual sneakers. Perfect for the gym, running errands, or a night out with friends."
+    },
+    {
+        "id": 16,
+        "name": "White Floral Shirt",
+        "image": "./src/img/products/p1.jpg",
+        "price": "$40.90",
+        "rating": 5,
+        "description": "Perfect for sunny days and warm evenings, this white floral shirt is light and airy, and will keep you looking and feeling cool."
+    },
+    {
+        "id": 17,
+        "name": "Black Shirt",
+        "image": "./src/img/products/p8.jpg",
+        "price": "$38.90",
+        "rating": 4,
+        "description": "Get ready to impress with this sleek black shirt. The classic design is perfect for those who want to look sharp and put-together."
+    },
+    {
+        "id": 18,
+        "name": "Jeans Shirt",
+        "image": "./src/img/products/p12.jpg",
+        "price": "$39.90",
+        "rating": 4.5,
+        "description": "Get ready to turn heads with this fashionable jeans shirt. The unique and stylish design is perfect for those who want to stand out."
+    },
+    {
+        "id": 19,
+        "name": "Bicolor Shirt",
+        "image": "./src/img/products/p2.jpg",
+        "price": "$36.90",
+        "rating": 5,
+        "description": "Get two looks in one with this versatile shirt! Featuring a bright orange side and a cool blue side with an orange pocket, it's perfect for switching up your style whenever you want."
+    },
+    {
+        "id": 20,
+        "name": "Light-grey Sneakers",
+        "image": "./src/img/products/p11.jpg",
+        "price": "$47.90",
+        "rating": 4,
+        "description": "Stay comfortable and stylish with these versatile grey sport casual sneakers. The sleek design is perfect for any casual occasion."
+    },
+    {
+        "id": 21,
+        "name": "Orange Shirt",
+        "image": "./src/img/products/p9.jpg",
+        "price": "$33.90",
+        "rating": 3.5,
+        "description": "Add a pop of color to your wardrobe with this stunning orange Shirt. The vibrant hue is sure to turn heads."
+    },
+    {
+        "id": 22,
+        "name": "Black Sneakers",
+        "image": "./src/img/products/p4.jpg",
+        "price": "$49.90",
+        "rating": 5,
+        "description": "Take on any adventure in style with these sleek and versatile black sport casual sneakers. Perfect for the on-the-go individual who wants both comfort and style."
+    },
+    {
+        "id": 23,
+        "name": "Grey Shirt",
+        "image": "./src/img/products/p10.jpg",
+        "price": "$35.90",
+        "rating": 4,
+        "description": "Add a touch of elegance to your wardrobe with this beautiful grey shirt. The versatile color and comfortable fit make it a wardrobe staple."
+    },
+    {
+        "id": 24,
+        "name": "Purple Feline Shirt",
+        "image": "./src/img/products/p3.jpg",
+        "price": "$39.90",
+        "rating": 5,
+        "description": "Get ready to show off your love for felines with this adorable purple shirt featuring a multitude of playful cat illustrations. It's the perfect choice for cat lovers everywhere!"
+    }
+]
