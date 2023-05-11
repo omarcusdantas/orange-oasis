@@ -94,7 +94,7 @@ $(document).ready(function () {
     const currentUrl = window.location.href;
     if (
         currentUrl.includes("index.html") ||
-        currentUrl === window.location.origin + "/"
+        currentUrl === window.location.origin + "/orangeoasis/"
     ) {
         setProducts();
     }
