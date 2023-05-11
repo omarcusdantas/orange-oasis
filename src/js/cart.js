@@ -50,7 +50,7 @@ function cartEmpty(cartItems) {
 
 // Render a single cart item as HTML.
 function renderCartItem(product, index) {
-    const { name, img, size, price, quantity } = product;
+    const { name, image, size, price, quantity } = product;
     const numberPrice = Number(price.substring(1));
     const numberQuantity = Number(quantity);
 
@@ -58,7 +58,7 @@ function renderCartItem(product, index) {
         <div class="cart-item" id="${index}">
             <ion-icon name="close-circle"></ion-icon>
             <div class="cart-product">
-                <img src="${img}">
+                <img src="${image}">
                 <h4>${name}<br>${size}<br>${price}</h4>
             </div>
             <div class="item-total">

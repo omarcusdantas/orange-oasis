@@ -10,7 +10,7 @@ function saveProduct(cart, productScreen, product) {
 }
 
 // Gets the product informations when "Add to Cart" button is clicked an then saves it in the cart.
-function addToCart() {
+function getProductInfo(products, id) {
     let cart = JSON.parse(sessionStorage.getItem("cart"));
 
     const productScreen = $(".product-screen");
@@ -18,13 +18,9 @@ function addToCart() {
     const productSizeSelect = productInfo.find("#product-size");
     const productSize = productSizeSelect.val();
 
-    const product = {
-        img: productInfo.find("img").attr("src"),
-        name: productInfo.find("#product-name").text(),
-        price: productInfo.find("#product-price").text(),
-        size: productSize,
-        quantity: productInfo.find("#product-quantity").val(),
-    };
+    const product = products[id - 1];
+    product.size = productSize;
+    product.quantity = productInfo.find("#product-quantity").val();
 
     if (productSize === "") {
         productSizeSelect.addClass("choose-size");
@@ -33,4 +29,13 @@ function addToCart() {
     productSizeSelect.removeClass("choose-size");
 
     saveProduct(cart, productScreen, product);
+}
+
+// Gets the products list from JSON file.
+function addToCart(id) {
+    fetch("./src/products-list.json")
+        .then((response) => response.json())
+        .then((data) => {
+            getProductInfo(data, id);
+        });
 }
