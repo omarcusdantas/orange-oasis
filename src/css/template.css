@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
     box-sizing: border-box;
@@ -24,8 +24,8 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #FFECE9;
+    background-color: #ffece9;
+    font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -40,26 +40,26 @@ h2 {
 }
 
 h3 {
-    color: white;
+    color: #ffffff;
     font-size: 2rem;
 }
 
 h4 {
-    color: #555;
-    font-weight: 500;
+    color: #555555;
     font-size: 1.8rem;
+    font-weight: 500;
 }
 
 p {
-    line-height: 25px;
-    color: #555;
+    color: #555555;
     font-size: 1.6rem;
+    line-height: 25px;
 }
 
 a {
-    text-decoration: none;
-    color: #555;
+    color: #555555;
     font-size: 1.6rem;
+    text-decoration: none;
 }
 
 ion-icon {
@@ -67,7 +67,7 @@ ion-icon {
 }
 
 header {
-    background: #FFECE9;
+    background: #ffece9;
 }
 
 header ion-icon {
@@ -76,9 +76,9 @@ header ion-icon {
 
 .header-container {
     margin: 0 auto;
+    padding: 5px 40px;
     max-width: 1300px;
     display: flex;
-    padding: 5px 40px;
     align-items: center;
     justify-content: space-between;
 }
@@ -93,9 +93,8 @@ header ion-icon {
 }
 
 .menu li {
-    padding-top: 10px;
-    padding-bottom: 5px;
     margin-right: 20px;
+    padding: 10px 0 5px 0;
     transition: transform 0.3s;
 }
 
@@ -112,19 +111,19 @@ header ion-icon {
 
 .container {
     margin: 0 auto;
+    padding: 0 40px;
     max-width: 1300px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 40px;
 }
 
 footer {
+    background-color: #ffc26b;
     padding-top: 5px;
-    background-color: #FFC26B;
-    box-shadow: 0px -12px 18px 4px rgba(231,166,26,0.32);
+    box-shadow: 0px -12px 18px 4px rgba(231, 166, 26, 0.32);
 }
 
-footer>p {
+footer > p {
     text-align: center;
     padding-bottom: 10px;
 }
@@ -132,13 +131,13 @@ footer>p {
 .footer-container {
     margin: 10px auto;
     max-width: 1300px;
+    padding: 10px 40px;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 40px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1.5px solid #ff523b;
     gap: 30px;
+    border-bottom: 1.5px solid #ff523b;
 }
 
 .app p {
@@ -157,10 +156,10 @@ footer>p {
 }
 
 .purpose {
+    text-align: center;
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
 }
 
@@ -172,7 +171,8 @@ footer>p {
     width: 150px;
 }
 
-.about-links, .follow-links {
+.about-links,
+.follow-links {
     flex-basis: 50%;
 }
 
@@ -186,8 +186,8 @@ footer>p {
 }
 
 .links h4 {
+    color: #000000;
     font-size: 1.8rem;
-    color: black;
     margin-bottom: 10px;
 }
 
@@ -196,29 +196,29 @@ footer>p {
 }
 
 .cart-icon {
-    position: relative;
     margin-top: 5px;
+    position: relative;
 }
 
 .cart-info {
-    position: absolute;
+    background-color: #ff0000;
     width: 17px;
     height: 17px;
-    background-color: red;
     border-radius: 50%;
+    position: absolute;
     bottom: -4px;
     left: -5px;
 }
 
 .cart-info p {
-    position: absolute;
-    top: -3.5px;
-    left: 1.5px;
+    color: #ffffff;
     font-size: 1.2rem;
-    color: white;
     text-align: center;
     width: 15px;
     height: 15px;
+    position: absolute;
+    top: -3.5px;
+    left: 1.5px;
 }
 
 .cart-empty {
@@ -226,17 +226,17 @@ footer>p {
 }
 
 .top-button {
-    position: fixed;
     background-color: #ff7300c5;
+    padding: 5px;
     border-radius: 10px;
+    position: fixed;
     bottom: 15px;
     right: 15px;
-    padding: 5px;
 }
 
 .top-button ion-icon {
+    color: #ffffff;
     font-size: 30px;
-    color: white;
 }
 
 @media (max-width: 910px) {
@@ -244,18 +244,19 @@ footer>p {
         font-size: 4rem;
         line-height: 40px;
     }
-    
+
     h3 {
         font-size: 1.6rem;
     }
 
-    h4, p {
+    h4,
+    p {
         font-size: 1.5rem;
     }
 
     .footer-container {
-        justify-content: center;
         text-align: center;
+        justify-content: center;
     }
 
     .app-images {
@@ -267,23 +268,23 @@ footer>p {
     }
 }
 
-@media (max-width: 768px) {    
+@media (max-width: 768px) {
     nav {
         display: none;
     }
 
     nav ul {
+        background-color: #333333;
+        width: 250px;
+        padding: 20px 0 20px 0;
+        gap: 10px;
+        max-height: 10px;
         flex-direction: column;
         align-items: center;
         position: absolute;
         top: 80px;
         right: 0;
-        background-color: #333333;
-        width: 250px;
         z-index: 1;
-        padding: 20px 0 20px 0;
-        gap: 10px;
-        max-height: 10px;
         overflow: hidden;
         transition: max-height 0.5s;
     }
@@ -295,14 +296,13 @@ footer>p {
     .menu li {
         padding: 0;
         margin: 0;
-        display: block;
         width: 100%;
         height: fit-content;
+        display: block;
     }
 
     .menu li a {
-        color: white;
-        display: block;
+        color: #ffffff;
         width: 100%;
         height: 50px;
         display: flex;
@@ -315,17 +315,19 @@ footer>p {
     }
 }
 
-
 @media (max-width: 576px) {
     h2 {
         font-size: 3rem;
     }
 
-    h3, .links h4 {
+    h3,
+    .links h4 {
         font-size: 1.4rem;
     }
 
-    h4, p, .links li a {
+    h4,
+    p,
+    .links li a {
         font-size: 1.3rem;
     }
 

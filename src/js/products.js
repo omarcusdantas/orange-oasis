@@ -1,8 +1,13 @@
+// Define a variable to store the total number of product pages.
+let numberPages;
+
+// Toggle the active button
 function toggleButton(num) {
     $(".current-button").removeClass("current-button");
     $(`#${num}-button`).addClass("current-button");
 }
 
+// Toggle the visibility of the current and new page.
 function togglePage(page) {
     page.toggleClass("hidden")
         .toggleClass("current")
@@ -10,28 +15,31 @@ function togglePage(page) {
         .animate({ opacity: 1 }, 1000);
 }
 
+// Move to the next page.
 function forwardButton(current, numCurrent) {
-    if (numCurrent !== 2) {
-        const newPage = $(`#${numCurrent+1}-page`);
+    if (numCurrent !== numberPages) {
+        const newPage = $(`#${numCurrent + 1}-page`);
         togglePage(current);
         togglePage(newPage);
-        toggleButton(numCurrent+1);
+        toggleButton(numCurrent + 1);
     }
 }
 
+// Move to the previous page.
 function backButton(current, numCurrent) {
     if (numCurrent !== 1) {
-        const newPage = $(`#${numCurrent-1}-page`);
+        const newPage = $(`#${numCurrent - 1}-page`);
         togglePage(current);
         togglePage(newPage);
-        toggleButton(numCurrent-1);
+        toggleButton(numCurrent - 1);
     }
 }
 
+// Change the current page.
 function changePage(element) {
     const current = $(".current");
     const numCurrent = parseInt(current.attr("id"));
-    const idButton = element.attr("id"); 
+    const idButton = element.attr("id");
 
     if (idButton === "back-button") {
         backButton(current, numCurrent);
@@ -52,79 +60,110 @@ function changePage(element) {
     toggleButton(numButton);
 }
 
-$(".page-button").click(function() {
-    changePage($(this));
-});
+// Render a button with given index.
+function renderButton(index) {
+    if (index === 1) {
+        return `<div class="page-button current-button" id="1-button"><p>1</p></div>`;
+    }
+    return `<div class="page-button" id="${index}-button"><p>${index}</p></div>`;
+}
 
-fetch("./src/products-list.json")
-    .then(response => response.json())
-    .then(data => {
-        renderPages(data);
+// Render all the page buttons.
+function renderButtons() {
+    const buttonsContainer = $(".toggle-page");
+    const backButtonHtml = `<div class="page-button" id="back-button"><p><</p></div>`;
+    const fowardButtonHtml = `<div class="page-button" id="foward-button"><p>></p></div>`;
+    const buttonsHtml = [];
+    buttonsHtml.push(backButtonHtml);
+
+    for (let i = 1; i <= numberPages; i++) {
+        const buttonHtml = renderButton(i);
+        buttonsHtml.push(buttonHtml);
+    }
+
+    buttonsHtml.push(fowardButtonHtml);
+
+    const buttonsContainerHtml = buttonsHtml.join("");
+    buttonsContainer.html(buttonsContainerHtml);
+
+    $(".page-button").click(function () {
+        changePage($(this));
     });
+}
 
-function renderPages(products) {
-    const container = $("main");
-    const numberPages = Math.ceil(products.length/12);
-    const page = $('<div/>', {class: 'container allproducts current', id: '1-page'})
-    for (let i = 0; i < 12; i++) {
-        const rating = products[i].rating;
-        let stars = "";
-        for (let j = 0; j < Math.floor(rating); j++) {
-            stars += `<ion-icon name="star"></ion-icon>`
+// Generate HTML code for product rating stars.
+function ratingHtml(rating) {
+    let ratingHtml = "";
+    for (let i = 0; i < Math.floor(rating); i++) {
+        ratingHtml += `<ion-icon name="star"></ion-icon>`;
+    }
+    if (Math.floor(rating) != rating) {
+        ratingHtml += `<ion-icon name="star-half-outline"></ion-icon>`;
+    }
+    if (rating < 4.5) {
+        for (let i = Math.ceil(rating); i < 5; i++) {
+            ratingHtml += `<ion-icon name="star-outline"></ion-icon>`;
         }
-        if (Math.floor(rating) != rating) {
-            stars += `<ion-icon name="star-half-outline"></ion-icon>`
-        }
-        if (rating<4.5) {
-            console.log("oi")
-            for (let l = Math.ceil(rating); l<5; l++) {
-                stars += `<ion-icon name="star-outline"></ion-icon>`
-            }
-        }
-        const productHtml = `
-            <div class="product" id="${products[i].id}">
-                <img src="${products[i].image}" alt="${products[i].name}">
-                <h4>${products[i].name}</h4>
-                <div class="rating">
-                    ${stars}
-                </div>
-                <p>${products[i].price}</p>
+    }
+    return ratingHtml;
+}
+
+// Render the HTML for a single product.
+function renderProduct(product) {
+    const { id, image, name, price, rating } = product;
+    let stars = ratingHtml(rating);
+
+    const productHtml = `
+        <div class="product" id="${id}">
+            <img src="${image}" alt="${name}">
+            <h4>${name}</h4>
+            <div class="rating">
+                ${stars}
             </div>
-        `;
-        page.append(productHtml);
-    } 
-    page.appendTo(container);
+            <p>${price}</p>
+        </div>
+    `;
 
-    for (let i = 2; i <= numberPages; i++) {
-        const page = $('<div/>', {class: 'container allproducts hidden', id: `${i}-page`})
-        for (let j = 0; j < 12; j++) {
-            const rating = products[j+12*(i-1)].rating;
-            let stars = "";
-            for (let k = 0; k < Math.floor(rating); k++) {
-                stars += `<ion-icon name="star"></ion-icon>`
-            }
-            if (Math.floor(rating) != rating) {
-                stars += `<ion-icon name="star-half-outline"></ion-icon>`
-            }
-            if (rating<4.5) {
-                console.log("oi")
-                for (let l = Math.ceil(rating); l<5; l++) {
-                    stars += `<ion-icon name="star-outline"></ion-icon>`
-                }
-            }
-            const productHtml = `
-                <div class="product" id="${products[j+12*(i-1)].id}">
-                    <img src="${products[j+12*(i-1)].image}" alt="${products[j+12*(i-1)].name}">
-                    <h4>${products[j+12*(i-1)].name}</h4>
-                    <div class="rating">
-                        ${stars}
-                    </div>
-                    <p>${products[j+12*(i-1)].price}</p>
-                </div>
-            `;
-            page.append(productHtml);
-        } 
-        page.appendTo(container);
-    };
+    return productHtml;
+}
+
+// Render a single page of products.
+function renderPage(pageNumber, products) {
+    const container = $("main");
+    const visibility = pageNumber === 1 ? "current" : "hidden";
+    const page = $("<div/>", {
+        class: `container allproducts ${visibility}`,
+        id: `${pageNumber}-page`,
+    });
+    const productsHtml = [];
+
+    for (let i = 0; i < 12; i++) {
+        const product = products[i + 12 * (pageNumber - 1)];
+        let productHtml = renderProduct(product);
+        productsHtml.push(productHtml);
+    }
+
+    const pageHtml = productsHtml.join("");
+    page.html(pageHtml);
+    page.appendTo(container);
+}
+
+// Render all pages of products.
+function renderPages(products) {
+    const productsPerPage = 12;
+    numberPages = Math.ceil(products.length / productsPerPage);
+
+    for (let i = 1; i <= numberPages; i++) {
+        renderPage(i, products);
+    }
+
+    renderButtons();
     setProducts();
 }
+
+// Call products saved in json file and render products pages with them.
+fetch("./src/products-list.json")
+    .then((response) => response.json())
+    .then((data) => {
+        renderPages(data);
+    });

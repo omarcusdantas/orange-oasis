@@ -3,43 +3,43 @@ main {
 }
 
 .menu li:nth-child(2) {
-    border-bottom: 3px solid #ff523b;   
+    border-bottom: 3px solid #ff523b;
     transform: translateY(-5px);
 }
 
 .products-title {
-    color: black;
+    color: #000000;
     font-weight: 700;
-    padding: 80px 0px 40px 0;
     font-size: 3rem;
     text-align: center;
+    padding: 80px 0px 40px 0;
 }
 
 .toggle-page {
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
 }
 
 .page-button {
+    background-color: #ff523b;
+    color: #ffffff;
     margin-left: 15px;
     width: 40px;
     height: 40px;
-    background-color: #ff523b;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    color: white;
     cursor: pointer;
 }
 
 .page-button p {
-    font-size: 2rem;
     color: inherit;
+    font-size: 2rem;
 }
 
 .current-button {
-    background-color: white;
+    background-color: #ffffff;
     color: #555555;
 }

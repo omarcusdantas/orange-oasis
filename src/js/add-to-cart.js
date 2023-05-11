@@ -1,14 +1,30 @@
+// Saves the product to the cart and updates the cart in sessionStorage
+function saveProduct(cart, productScreen, product) {
+    Array.isArray(cart) ? cart.push(product) : (cart = [product]);
+
+    const data = JSON.stringify(cart);
+    sessionStorage.setItem("cart", data);
+    productScreen.toggleClass("hidden");
+
+    checkCart();
+}
+
+// Gets the product informations when "Add to Cart" button is clicked an then saves it in the cart.
 function addToCart() {
-    
     let cart = JSON.parse(sessionStorage.getItem("cart"));
+
     const productScreen = $(".product-screen");
     const productInfo = $(".product-table");
-    const productImg = productInfo.find("img").attr("src");
-    const productName = productInfo.find("#product-name").text();
-    const productPrice = productInfo.find("#product-price").text();
     const productSizeSelect = productInfo.find("#product-size");
     const productSize = productSizeSelect.val();
-    const productQuantity = productInfo.find("#product-quantity").val();
+
+    const product = {
+        img: productInfo.find("img").attr("src"),
+        name: productInfo.find("#product-name").text(),
+        price: productInfo.find("#product-price").text(),
+        size: productSize,
+        quantity: productInfo.find("#product-quantity").val(),
+    };
 
     if (productSize === "") {
         productSizeSelect.addClass("choose-size");
@@ -16,24 +32,5 @@ function addToCart() {
     }
     productSizeSelect.removeClass("choose-size");
 
-    const product = {
-        img: productImg,
-        name: productName,
-        price: productPrice,
-        size: productSize,
-        quantity: productQuantity
-    };
-
-    if (Array.isArray(cart)) {
-        cart.push(product);
-    }
-    else {
-        cart = [product];
-    }
-
-    const data = JSON.stringify(cart);
-    sessionStorage.setItem("cart", data);
-    productScreen.toggleClass("hidden");
-
-    checkCart();
+    saveProduct(cart, productScreen, product);
 }

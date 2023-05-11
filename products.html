@@ -35,37 +35,9 @@
     </header>
     <main>
         <h2 class="products-title">All products</h2>
-        <div class="container toggle-page">
-            <div class="page-button" id="back-button"><p><</p></div>
-            <div class="page-button current-button" id="1-button"><p>1</p></div>
-            <div class="page-button" id="2-button"><p>2</p></div>
-            <div class="page-button" id="foward-button"><p>></p></div>
-        </div>
-        
+        <div class="container toggle-page"></div>
         <div class="product-screen hidden">
-            <div class="product-table">
-                <img src="./src/img/home/f1.jpg" alt="White purple shirt">
-                <div class="product-info">
-                    <h2 id="product-name">White purple shirt</h2>
-                    <h3 id="product-price">$50.00</h3>
-                    <select id="product-size">
-                        <option value="">Select size</option>
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                        <option value="XL">XL</option>
-                        <option value="XXL">XXL</option>
-                    </select>
-                    <input type="number" value="1" id="product-quantity">
-                    <button id="add">Add To Cart</button>
-                    <h3>Product Details</h3>
-                    <p>
-                        A high-quality cloth perfect for any casual occasion.
-                        Feel confident and express your individuality no matter where you go.
-                    </p>
-                </div>
-                <ion-icon name="close-circle"></ion-icon>
-            </div>
+            <div class="product-table"></div>
         </div>
     </main>
     <footer>
@@ -115,8 +87,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="./src/js/jquery-3.6.4.min.js"></script>
     <script src="./src/js/menu.js"></script>
-    <script src="./src/js/render-products.js"></script>
-    <script src="./src/js/products.js"></script>
+    <script src="./src/js/product-screen.js"></script>
     <script src="./src/js/add-to-cart.js"></script>
+    <script src="./src/js/products.js"></script>
 </body>
 </html>

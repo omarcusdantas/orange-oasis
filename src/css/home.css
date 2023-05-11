@@ -1,9 +1,9 @@
 header {
-    background: radial-gradient(#fff,#ffd6d6);
+    background: radial-gradient(#ffffff, #ffd6d6);
 }
 
 .menu li:first-child {
-    border-bottom: 3px solid #ff523b;   
+    border-bottom: 3px solid #ff523b;
     transform: translateY(-5px);
 }
 
@@ -14,7 +14,8 @@ header {
     position: relative;
 }
 
-.hero-content, .hero img {
+.hero-content,
+.hero img {
     flex-basis: 50%;
 }
 
@@ -24,7 +25,6 @@ header {
 
 .hero img {
     max-width: 610px;
-
 }
 
 .hero:after {
@@ -36,16 +36,22 @@ header {
 }
 
 @keyframes downarrow {
-    0% {transform: translate(-50%, 0); opacity: 0.4;}
-    100% {transform: translate(-50%, 0.4em); opacity: 0.9;}
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(-50%, 0.4em);
+        opacity: 0.9;
+    }
 }
 
 .hero-content button {
     background-color: #ff523b;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.6rem;
-    padding: 8px 30px;
     margin: 30px 0;
+    padding: 8px 30px;
     border-radius: 30px;
     border: none;
     transition: background-color 0.5s;
@@ -57,24 +63,24 @@ header {
 }
 
 .benefits {
+    margin-top: 50px;
     justify-content: center;
     gap: 50px;
-    margin-top: 50px;
 }
 
 .benefit {
     background-color: #fffafa;
-    padding: 20px 20px 10px 20px;
-    border: 2px solid #FF8833;
     text-align: center;
-    border-radius: 5px;
+    padding: 20px 20px 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #ff8833;
+    border-radius: 5px;
 }
 
 .benefit:hover {
-    box-shadow: 0px 0px 32px 0px rgba(255,136,51,0.3);
+    box-shadow: 0px 0px 32px 0px rgba(255, 136, 51, 0.3);
 }
 
 .benefit img {
@@ -82,19 +88,19 @@ header {
 }
 
 .benefit p {
-    background-color: #FF8833;
+    background-color: #ff8833;
+    color: #ffffff;
     width: 90%;
-    color: white;
     border-radius: 10px;
 }
 
 .title {
-    text-align: center;
-    margin: 50px 0 50px 0;
-    line-height: 50px;
-    color: #555;
-    position: relative;
+    color: #555555;
     font-size: 2.5rem;
+    text-align: center;
+    line-height: 50px;
+    margin: 50px 0;
+    position: relative;
 }
 
 .title::after {
@@ -110,21 +116,22 @@ header {
 }
 
 .discount {
-    margin-top: 60px;
-    background: #060F1E url("../img/home/discount.jpg") no-repeat;
+    background: #060f1e url("../img/home/discount.jpg") no-repeat;
     background-position: center;
     background-size: cover;
+    text-align: center;
+    margin-top: 60px;
+    padding: 0 20px;
     height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 0 20px;
 }
 
-.discount h2, .banner h2 {
-    color: white;
+.discount h2,
+.banner h2 {
+    color: #ffffff;
 }
 
 .discount h3 {
@@ -132,37 +139,37 @@ header {
 }
 
 .discount button {
-    margin-top: 50px;
+    background-color: #ff523b;
+    color: #ffffff;
     font-size: 2.5rem;
+    margin-top: 50px;
+    padding: 20px 30px;
     border: none;
     border-radius: 5px;
-    padding: 20px 30px;
-    background-color: #ff523b;
-    color: white;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .discount button:hover {
-    background-color: white;
+    background-color: #ffffff;
     color: #ff523b;
 }
 
 .banners {
+    margin: 60px 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 60px 40px 60px 40px;
 }
 
 .banner {
+    padding-left: 20px;
     width: 400px;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20px;
     gap: 15px;
     border-radius: 10px;
 }
@@ -192,12 +199,8 @@ header {
         margin-top: 0;
     }
 
-    .banner {
-        width: 300px;
-        height: 150px;
-    }
-
-    .hero-content, .hero img {
+    .hero-content,
+    .hero img {
         flex-basis: auto;
     }
 
@@ -206,16 +209,12 @@ header {
     }
 
     .hero img {
-        height: 365px;
         width: 300px;
+        height: 365px;
     }
 
     .hero:after {
         display: none;
-    }
-
-    .title {
-        font-size: 2rem;
     }
 
     .benefit {
@@ -229,12 +228,20 @@ header {
     .benefit img {
         width: 120px;
     }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .banner {
+        width: 300px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 576px) {
-    .title {
-        font-size: 1.6rem;
-        margin: 30px 0;
+    .hero-content {
+        padding: 10px;
     }
 
     .benefits {
@@ -244,8 +251,9 @@ header {
     .benefit {
         width: 150px;
     }
-    
-    .hero-content {
-        padding: 10px;
+
+    .title {
+        font-size: 1.6rem;
+        margin: 30px 0;
     }
 }
