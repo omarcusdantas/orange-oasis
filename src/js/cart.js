@@ -64,7 +64,7 @@ function renderCartItem(product, index) {
             <div class="item-total">
                 <div class="quantity">
                 <h4>Quantity</h4>
-                <input type="number" value="${quantity}">
+                <input type="number" value="${quantity}" min="1">
                 </div>
                 <div class="sub-total">
                 <h4>Sub-total</h4>
@@ -110,4 +110,9 @@ $(document).ready(renderCart);
 // Event handler for the coupon button click event.
 $("#coupom-button").click(() => {
     $("#coupom-input").addClass("wrong-coupom");
+});
+
+// Event handler for the proceed button click event.
+$("#proceed").click(() => {
+    alert("Thank you for your preference!");
 });

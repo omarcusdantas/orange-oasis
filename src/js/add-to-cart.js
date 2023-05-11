@@ -18,15 +18,15 @@ function getProductInfo(products, id) {
     const productSizeSelect = productInfo.find("#product-size");
     const productSize = productSizeSelect.val();
 
-    const product = products[id - 1];
-    product.size = productSize;
-    product.quantity = productInfo.find("#product-quantity").val();
-
     if (productSize === "") {
         productSizeSelect.addClass("choose-size");
         return;
     }
     productSizeSelect.removeClass("choose-size");
+
+    const product = products[id - 1];
+    product.size = productSize;
+    product.quantity = productInfo.find("#product-quantity").val();
 
     saveProduct(cart, productScreen, product);
 }

@@ -65,7 +65,7 @@ function renderProductScreen(product, products) {
             <select id="product-size">
                 ${sizeHtml}
             </select>
-            <input type="number" value="1" id="product-quantity">
+            <input type="number" value="1" id="product-quantity" min="1">
             <button id="add">Add To Cart</button>
             <h3>Product Details</h3>
             <p>
