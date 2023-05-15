@@ -1,11 +1,22 @@
-// Selecting DOM elements.
-const nav = $("nav");
-const menu = $("nav ul");
-const menuButton = $(".hamburger-menu");
-const notMenu = $("body");
+// Menu variables
+let nav, menu, menuButton, notMenu;
 
 // Time for menu animation.
 const timeMenuAnimation = 250;
+
+// Check the cart and update cart icon.
+function checkCart() {
+    const cart = JSON.parse(sessionStorage.getItem("cart"));
+    const cartInfo = $(".cart-info");
+
+    if (Array.isArray(cart) && cart.length != 0) {
+        cartInfo.removeClass("cart-empty");
+        cartInfo.find("p").text(`${cart.length}`);
+        return;
+    }
+
+    cartInfo.addClass("cart-empty");
+}
 
 // Change menu height.
 function toggleMenuHeight() {
@@ -25,34 +36,26 @@ function disableMenu() {
 }
 
 // Set event handler to close menu when clicked outside it
-function setMenuUnselected() {
+function setDisableMenu() {
     notMenu.on("click", disableMenu);
 }
 
 // Click event listener for hamburger menu.
-menuButton.click(() => {
-    if (nav.hasClass("show")) {
-        disableMenu();
-        return;
-    }
-    toggleNav();
-    setTimeout(toggleMenuHeight, 1);
-    setTimeout(setMenuUnselected, timeMenuAnimation);
-});
+function setMenu() {
+    nav = $("nav");
+    menu = $("nav ul");
+    menuButton = $(".hamburger-menu");
+    notMenu = $("body");
 
-// Check the cart and update cart icon.
-function checkCart() {
-    const cart = JSON.parse(sessionStorage.getItem("cart"));
-    const cartInfo = $(".cart-info");
+    menuButton.click(() => {
+        if (nav.hasClass("show")) {
+            disableMenu();
+            return;
+        }
+        toggleNav();
+        setTimeout(toggleMenuHeight, 1);
+        setTimeout(setDisableMenu, timeMenuAnimation);
+    });
 
-    if (Array.isArray(cart) && cart.length != 0) {
-        cartInfo.removeClass("cart-empty");
-        cartInfo.find("p").text(`${cart.length}`);
-        return;
-    }
-
-    cartInfo.addClass("cart-empty");
+    checkCart();
 }
-
-// Call checkCart function on document ready
-$(document).ready(checkCart);

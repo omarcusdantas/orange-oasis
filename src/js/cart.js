@@ -105,14 +105,16 @@ function renderCart() {
 }
 
 // Called when the page finishes loading and sets up the list of products.
-$(document).ready(renderCart);
+$(document).ready(() => {
+    // Event handler for the coupon button click event.
+    $("#coupom-button").click(() => {
+        $("#coupom-input").addClass("wrong-coupom");
+    });
 
-// Event handler for the coupon button click event.
-$("#coupom-button").click(() => {
-    $("#coupom-input").addClass("wrong-coupom");
-});
+    // Event handler for the proceed button click event.
+    $("#proceed").click(() => {
+        alert("Thank you for your preference!");
+    });
 
-// Event handler for the proceed button click event.
-$("#proceed").click(() => {
-    alert("Thank you for your preference!");
+    renderCart();
 });

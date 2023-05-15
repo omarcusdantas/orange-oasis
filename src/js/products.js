@@ -162,8 +162,10 @@ function renderPages(products) {
 }
 
 // Call products saved in json file and render products pages with them.
-fetch("./src/products-list.json")
-    .then((response) => response.json())
-    .then((data) => {
-        renderPages(data);
-    });
+$(document).ready(() => {
+    fetch("./src/products-list.json")
+        .then((response) => response.json())
+        .then((data) => {
+            renderPages(data);
+        });
+});
