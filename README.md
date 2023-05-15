@@ -1,6 +1,7 @@
 # [Orange Oasis](https://omarcusdantas.github.io/orangeoasis/)
 A fictional e-commerce platform that offers dynamic product rendering, cart management, and a responsive design.
 
+![Image description](https://drive.google.com/uc?id=1uIqFZustjQK-y6fnFGz54fMWHU9OtHra)
 ## :speech_balloon: Description
 This project contains the HTML, CSS, JavaScript, images and JSON files for a fictional e-commerce called Orange Oasis. The application uses [jQuery](https://jquery.com/) and [ionicons](https://ionic.io/ionicons/) to enhance the user experience and provide a range of helpful features.
 
