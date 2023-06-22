@@ -33,9 +33,11 @@ function getProductInfo(products, id) {
 
 // Gets the products list from JSON file.
 function addToCart(id) {
-    fetch("./src/products-list.json")
-        .then((response) => response.json())
-        .then((data) => {
+    $.ajax({
+        url: "./src/products-list.json",
+        dataType: "json",
+        success: function(data) {
             getProductInfo(data, id);
-        });
+        }
+    });
 }

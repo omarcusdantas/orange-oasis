@@ -163,9 +163,11 @@ function renderPages(products) {
 
 // Call products saved in json file and render products pages with them.
 $(document).ready(() => {
-    fetch("./src/products-list.json")
-        .then((response) => response.json())
-        .then((data) => {
+    $.ajax({
+        url: "./src/products-list.json",
+        dataType: "json",
+        success: function(data) {
             renderPages(data);
-        });
+        }
+    });
 });

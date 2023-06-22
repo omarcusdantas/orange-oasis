@@ -80,22 +80,20 @@ function renderProductScreen(product, products) {
 
 // Retrieves the products list from a JSON file and sets up the click event handlers for each product.
 function setProducts() {
-    fetch("./src/products-list.json")
-        .then((response) => response.json())
-        .then((data) => {
-            $(".product").click(function () {
+    $.ajax({
+        url: "./src/products-list.json",
+        dataType: "json",
+        success: function(data) {
+            $(".product").click(function() {
                 renderProductScreen($(this), data);
             });
-        });
+        }
+    });
 }
 
-// Called when the page finishes loading and sets up the products list if the user is on the index page.
+// Called when the page finishes loading and sets up the products list if the user is on the home page.
 $(document).ready(function () {
-    const currentUrl = window.location.href;
-    if (
-        currentUrl.includes("index.html") ||
-        currentUrl === window.location.origin + "/orangeoasis/"
-    ) {
+    if ($(".banners").length !== 0) {
         setProducts();
     }
 });
