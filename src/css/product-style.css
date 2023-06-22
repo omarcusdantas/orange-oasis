@@ -186,16 +186,18 @@
 
     .product-table {
         padding: 20px;
+        width: 85%;
+        align-items: center;
     }
 
     .product-table img {
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
     }
 
     .product-info {
         padding: 0;
-        width: 200px;
+        width: 90%;
     }
 
     .product-info h4 {

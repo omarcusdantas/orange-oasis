@@ -7,7 +7,8 @@ function setProductScreen(id) {
     $("#add").click(() => addToCart(id));
     productScreen.toggleClass("hidden");
 
-    productScreen.click((event) => {
+    productScreen.one("click", (event) => {
+        console.log(event.target)
         if (
             event.target === productScreen[0] ||
             event.target === closeButton[0]
