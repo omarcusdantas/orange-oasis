@@ -23,7 +23,7 @@ function changeQuantity(index, quantity) {
 
 // Attach event handlers to the close button and quantity input of each cart item.
 function setEventHandlers() {
-    $(".cart-item ion-icon").click(function () {
+    $(".cart-item .exclude").click(function () {
         const index = $(this).parent().attr("id");
         excludeItem(index);
     });
@@ -56,7 +56,7 @@ function renderCartItem(product, index) {
 
     const itemHtml = `
         <div class="cart-item" id="${index}">
-            <ion-icon name="close-circle"></ion-icon>
+            <button class="exclude"><ion-icon name="close-circle"></ion-icon></button>
             <div class="cart-product">
                 <img src="${image}">
                 <h4>${name}<br>${size}<br>${price}</h4>

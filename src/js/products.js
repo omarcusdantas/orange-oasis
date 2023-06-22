@@ -114,14 +114,14 @@ function renderProduct(product) {
     let stars = ratingHtml(rating);
 
     const productHtml = `
-        <div class="product" id="${id}">
+        <button class="product" id="${id}">
             <img src="${image}" alt="${name}">
             <h4>${name}</h4>
             <div class="rating">
                 ${stars}
             </div>
             <p>${price}</p>
-        </div>
+        </button>
     `;
 
     return productHtml;
