@@ -26,7 +26,7 @@ main {
 }
 
 .cart-item ion-icon {
-    font-size: 30px;
+    font-size: 3rem;
     margin: 0 10px;
 }
 
@@ -52,7 +52,7 @@ main {
 }
 
 .cart-product h4 {
-    line-height: 30px;
+    line-height: 3rem;
 }
 
 .cart-product img {
