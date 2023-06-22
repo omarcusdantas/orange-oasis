@@ -7,13 +7,14 @@ function setProductScreen(id) {
     $("#add").click(() => addToCart(id));
     productScreen.toggleClass("hidden");
 
-    productScreen.one("click", (event) => {
+    productScreen.on("click", (event) => {
         if (
             event.target === productScreen[0] ||
             event.target === closeButton[0]
         ) {
             productScreen.toggleClass("hidden");
             productSizeSelect.removeClass("choose-size");
+            productScreen.off("click");
         }
     });
 }
