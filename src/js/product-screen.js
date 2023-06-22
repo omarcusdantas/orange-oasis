@@ -8,7 +8,6 @@ function setProductScreen(id) {
     productScreen.toggleClass("hidden");
 
     productScreen.one("click", (event) => {
-        console.log(event.target)
         if (
             event.target === productScreen[0] ||
             event.target === closeButton[0]
