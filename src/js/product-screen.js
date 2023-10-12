@@ -1,10 +1,9 @@
-// Sets up the product screen, which displays the details of a product when the user clicks on it.
 function setProductScreen(id) {
     const productScreen = $(".product-screen");
     const closeButton = $(".product-table ion-icon");
     const productSizeSelect = $(".product-table").find("#product-size");
 
-    $("#add").click(() => addToCart(id));
+    $("#add").click(() => fetchProduct(id));
     productScreen.toggleClass("hidden");
 
     productScreen.on("click", (event) => {
@@ -19,7 +18,6 @@ function setProductScreen(id) {
     });
 }
 
-// Defines the size options based on the type of the product.
 function getSizeHtml(type) {
     let sizeHtml = "";
     if (type === "sneakers") {
@@ -49,7 +47,6 @@ function getSizeHtml(type) {
     return sizeHtml;
 }
 
-// Render the product informations.
 function renderProductScreen(product, products) {
     const productId = Number(product.attr("id"));
     const currentProduct = products[productId - 1];
@@ -79,7 +76,6 @@ function renderProductScreen(product, products) {
     setProductScreen(id);
 }
 
-// Retrieves the products list from a JSON file and sets up the click event handlers for each product.
 function setProducts() {
     $.ajax({
         url: "./src/products-list.json",

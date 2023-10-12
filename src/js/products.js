@@ -1,13 +1,10 @@
-// Define a variable to store the total number of product pages.
-let numberPages;
+let numberOfPages;
 
-// Toggle the active button
-function toggleButton(num) {
+function setCurrentButton(num) {
     $(".current-button").removeClass("current-button");
     $(`#${num}-button`).addClass("current-button");
 }
 
-// Toggle the visibility of the current and new page.
 function togglePage(page) {
     page.toggleClass("hidden")
         .toggleClass("current")
@@ -15,38 +12,35 @@ function togglePage(page) {
         .animate({ opacity: 1 }, 1000);
 }
 
-// Move to the next page.
-function forwardButton(current, numCurrent) {
-    if (numCurrent !== numberPages) {
+function fowardPage(current, numCurrent) {
+    if (numCurrent !== numberOfPages) {
         const newPage = $(`#${numCurrent + 1}-page`);
         togglePage(current);
         togglePage(newPage);
-        toggleButton(numCurrent + 1);
+        setCurrentButton(numCurrent + 1);
     }
 }
 
-// Move to the previous page.
-function backButton(current, numCurrent) {
+function previousPage(current, numCurrent) {
     if (numCurrent !== 1) {
         const newPage = $(`#${numCurrent - 1}-page`);
         togglePage(current);
         togglePage(newPage);
-        toggleButton(numCurrent - 1);
+        setCurrentButton(numCurrent - 1);
     }
 }
 
-// Change the current page.
 function changePage(element) {
     const current = $(".current");
     const numCurrent = parseInt(current.attr("id"));
     const idButton = element.attr("id");
 
     if (idButton === "back-button") {
-        backButton(current, numCurrent);
+        previousPage(current, numCurrent);
         return;
     }
     if (idButton === "foward-button") {
-        forwardButton(current, numCurrent);
+        fowardPage(current, numCurrent);
         return;
     }
 
@@ -57,10 +51,9 @@ function changePage(element) {
     const newPage = $(`#${numButton}-page`);
     togglePage(current);
     togglePage(newPage);
-    toggleButton(numButton);
+    setCurrentButton(numButton);
 }
 
-// Render a button with given index.
 function renderButton(index) {
     if (index === 1) {
         return `<div class="page-button current-button" id="1-button"><p>1</p></div>`;
@@ -68,15 +61,14 @@ function renderButton(index) {
     return `<div class="page-button" id="${index}-button"><p>${index}</p></div>`;
 }
 
-// Render all the page buttons.
-function renderButtons() {
+function renderPageButtons() {
     const buttonsContainer = $(".toggle-page");
     const backButtonHtml = `<div class="page-button" id="back-button"><p><</p></div>`;
     const fowardButtonHtml = `<div class="page-button" id="foward-button"><p>></p></div>`;
     const buttonsHtml = [];
     buttonsHtml.push(backButtonHtml);
 
-    for (let i = 1; i <= numberPages; i++) {
+    for (let i = 1; i <= numberOfPages; i++) {
         const buttonHtml = renderButton(i);
         buttonsHtml.push(buttonHtml);
     }
@@ -91,7 +83,6 @@ function renderButtons() {
     });
 }
 
-// Generate HTML code for product rating stars.
 function ratingHtml(rating) {
     let ratingHtml = "";
     for (let i = 0; i < Math.floor(rating); i++) {
@@ -108,7 +99,6 @@ function ratingHtml(rating) {
     return ratingHtml;
 }
 
-// Render the HTML for a single product.
 function renderProduct(product) {
     const { id, image, name, price, rating } = product;
     let stars = ratingHtml(rating);
@@ -127,7 +117,6 @@ function renderProduct(product) {
     return productHtml;
 }
 
-// Render a single page of products.
 function renderPage(pageNumber, products) {
     const container = $("main");
     const visibility = pageNumber === 1 ? "current" : "hidden";
@@ -148,20 +137,18 @@ function renderPage(pageNumber, products) {
     page.appendTo(container);
 }
 
-// Render all pages of products.
 function renderPages(products) {
     const productsPerPage = 12;
-    numberPages = Math.ceil(products.length / productsPerPage);
+    numberOfPages = Math.ceil(products.length / productsPerPage);
 
-    for (let i = 1; i <= numberPages; i++) {
+    for (let i = 1; i <= numberOfPages; i++) {
         renderPage(i, products);
     }
 
-    renderButtons();
+    renderPageButtons();
     setProducts();
 }
 
-// Call products saved in json file and render products pages with them.
 $(document).ready(() => {
     $.ajax({
         url: "./src/products-list.json",

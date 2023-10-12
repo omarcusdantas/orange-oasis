@@ -1,5 +1,4 @@
-// Saves the product to the cart and updates the cart in sessionStorage
-function saveProduct(cart, productScreen, product) {
+function saveProductInCart(cart, productScreen, product) {
     Array.isArray(cart) ? cart.push(product) : (cart = [product]);
 
     const data = JSON.stringify(cart);
@@ -9,7 +8,6 @@ function saveProduct(cart, productScreen, product) {
     checkCart();
 }
 
-// Gets the product informations when "Add to Cart" button is clicked an then saves it in the cart.
 function getProductInfo(products, id) {
     let cart = JSON.parse(sessionStorage.getItem("cart"));
 
@@ -28,11 +26,10 @@ function getProductInfo(products, id) {
     product.size = productSize;
     product.quantity = productInfo.find("#product-quantity").val();
 
-    saveProduct(cart, productScreen, product);
+    saveProductInCart(cart, productScreen, product);
 }
 
-// Gets the products list from JSON file.
-function addToCart(id) {
+function fetchProduct(id) {
     $.ajax({
         url: "./src/products-list.json",
         dataType: "json",

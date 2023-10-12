@@ -1,7 +1,7 @@
-# [Orange Oasis](https://omarcusdantas.github.io/orangeoasis/)
+# [Orange Oasis](https://omarcusdantas.github.io/orange-oasis/)
 A fictional e-commerce platform that offers dynamic product rendering, cart management, and a responsive design.
 
-![Image description](https://drive.google.com/uc?id=1uIqFZustjQK-y6fnFGz54fMWHU9OtHra)
+![Orange Oasis](https://drive.google.com/uc?id=1wVxrqX9qZjsY808x2w_VB90CXjRWnUZ7)
 ## :speech_balloon: Description
 This project contains the HTML, CSS, JavaScript, images and JSON files for a fictional e-commerce called Orange Oasis. The application uses [jQuery](https://jquery.com/) and [ionicons](https://ionic.io/ionicons/) to enhance the user experience and provide a range of helpful features.
 
@@ -20,14 +20,14 @@ The application uses sessionStorage to store the user's cart data, so the cart d
 * Responsive design for optimal experience on different devices.
 
 ## :computer: Usage
-* Access this [link](https://omarcusdantas.github.io/orangeoasis/) or clone the repository to your local machine and open a live server.
+* Access this [link](https://omarcusdantas.github.io/orange-oasis/) or clone the repository to your local machine and open a live server.
 * Navigate through the pages using the navigation bar at the top of the page.
 * Click on the products in either the Home or Products page to view its informations.
 * Select the desired quantity and size, and click the "Add to Cart" button to add the product to your cart.
 * Visit the Cart page to view your current cart, adjust the quantity or remove items as desired.
 
 ## :rocket: Deployment
-The project is deployed and can be accessed [here](https://omarcusdantas.github.io/orangeoasis/).
+The project is deployed and can be accessed [here](https://omarcusdantas.github.io/orange-oasis/).
 
 ## :bulb: Contributing
 This project is currently not open for contributions. However, you are welcome to fork the repository and make modifications for personal use.

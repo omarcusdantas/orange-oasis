@@ -1,7 +1,5 @@
-// Parse the "cart" item from sessionStorage as a JSON string and store it in the "products" variable.
 let products = JSON.parse(sessionStorage.getItem("cart"));
 
-// Update the "cart" item in sessionStorage with the new "products" array as a JSON string.
 function updateCart(products) {
     const data = JSON.stringify(products);
     sessionStorage.setItem("cart", data);
@@ -9,20 +7,17 @@ function updateCart(products) {
     checkCart();
 }
 
-// Remove the item at the specified index from the "products" array.
 function excludeItem(index) {
     products.splice(index, 1);
     updateCart(products);
 }
 
-// Change the quantity of the item at the specified index in the "products" array.
 function changeQuantity(index, quantity) {
     products[index].quantity = quantity;
     updateCart(products);
 }
 
-// Attach event handlers to the close button and quantity input of each cart item.
-function setEventHandlers() {
+function setItemsEventHandlers() {
     $(".cart-item .exclude").click(function () {
         const index = $(this).parent().attr("id");
         excludeItem(index);
@@ -35,8 +30,7 @@ function setEventHandlers() {
     });
 }
 
-// Display a message indicating that the cart is empty.
-function cartEmpty(cartItems) {
+function cartIsEmpty(cartItems) {
     const productHtml = `
         <div class="cart-item">
             <h3 class="empty">Your cart is empty. Come back after you finish shopping.</h3>
@@ -48,7 +42,6 @@ function cartEmpty(cartItems) {
     $("#subtotal").text(`$0.00`);
 }
 
-// Render a single cart item as HTML.
 function renderCartItem(product, index) {
     const { name, image, size, price, quantity } = product;
     const numberPrice = Number(price.substring(1));
@@ -77,12 +70,11 @@ function renderCartItem(product, index) {
     return itemHtml;
 }
 
-// Render the cart based on the products in the sessionStorage.
 function renderCart() {
     const cartItems = $(".cart-items");
 
     if (!Array.isArray(products) || products.length === 0) {
-        cartEmpty(cartItems);
+        cartIsEmpty(cartItems);
         return;
     }
 
@@ -101,17 +93,14 @@ function renderCart() {
     $("#total").text(`$${total.toFixed(2)}`);
     $("#subtotal").text(`$${total.toFixed(2)}`);
 
-    setEventHandlers();
+    setItemsEventHandlers();
 }
 
-// Called when the page finishes loading and sets up the list of products.
 $(document).ready(() => {
-    // Event handler for the coupon button click event.
     $("#coupom-button").click(() => {
         $("#coupom-input").addClass("wrong-coupom");
     });
 
-    // Event handler for the proceed button click event.
     $("#proceed").click(() => {
         alert("Thank you for your preference!");
     });

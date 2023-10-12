@@ -1,4 +1,3 @@
-// Render header and footer
 $(document).ready(() => {
     $.get("./src/template/header.html", (data) => {
         $("header").prepend(data);

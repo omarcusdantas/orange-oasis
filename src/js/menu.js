@@ -1,10 +1,7 @@
-// Menu variables
 let nav, menu, menuButton, notMenu;
 
-// Time for menu animation.
 const timeMenuAnimation = 250;
 
-// Check the cart and update cart icon.
 function checkCart() {
     const cart = JSON.parse(sessionStorage.getItem("cart"));
     const cartInfo = $(".cart-info");
@@ -18,29 +15,24 @@ function checkCart() {
     cartInfo.addClass("cart-empty");
 }
 
-// Change menu height.
 function toggleMenuHeight() {
     menu.toggleClass("menu-height");
 }
 
-// Toggle navigation visibility.
 function toggleNav() {
     nav.toggleClass("show");
 }
 
-// Disable menu after finish animation.
 function disableMenu() {
     toggleMenuHeight();
     setTimeout(toggleNav, timeMenuAnimation);
     notMenu.off("click");
 }
 
-// Set event handler to close menu when clicked outside it
-function setDisableMenu() {
+function setDisableMenuEvent() {
     notMenu.on("click", disableMenu);
 }
 
-// Click event listener for hamburger menu.
 function setMenu() {
     nav = $("nav");
     menu = $("nav ul");
@@ -54,7 +46,7 @@ function setMenu() {
         }
         toggleNav();
         setTimeout(toggleMenuHeight, 1);
-        setTimeout(setDisableMenu, timeMenuAnimation);
+        setTimeout(setDisableMenuEvent, timeMenuAnimation);
     });
 
     checkCart();
